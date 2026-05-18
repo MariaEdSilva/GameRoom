@@ -66,11 +66,20 @@ export default function App() {
     }
     else{
       return(
-        <View>
-          <View>
+        <View style={styles.areaGlobal}>
+          <View style={styles.areaJogo}>
             {
               usuarios.map(usuario => (
-                <View>
+                <View
+                style={[
+                  styles.player,
+                  {
+                    left: usuario.x,
+                    top: usuario.y,
+                    backgroundColor: 
+                  }
+                ]}
+                >
                   <Text>{usuario.name}</Text>
                 </View>
               ))
